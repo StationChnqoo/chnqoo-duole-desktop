@@ -30,12 +30,12 @@ class _HomePageState extends State<HomePage> {
               ...games.map((e) => Container(
                     margin: EdgeInsets.only(bottom: 12),
                     width: double.infinity,
-                    child: Card.outlined(
-                      margin: EdgeInsets.zero,
-                      child: GestureDetector(
-                          onTap: () {
-                            Get.toNamed(e.page);
-                          },
+                    child: GestureDetector(
+                      onTap: () {
+                        Get.toNamed(e.page);
+                      },
+                      child: Card.outlined(
+                          margin: EdgeInsets.zero,
                           child: Container(
                             padding: EdgeInsets.all(12),
                             child: Column(
