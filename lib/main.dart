@@ -1,3 +1,4 @@
+import 'package:duole/constants/fonts.dart';
 import 'package:duole/routes/routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -26,8 +27,9 @@ class _DuoleGameState extends State<DuoleGame> {
       title: '',
       theme: ThemeData(
         // scaffoldBackgroundColor: CupertinoColors.systemBackground,
+        fontFamily: Fonts.HarmonyOS,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: CupertinoColors.systemBrown,
+          seedColor: CupertinoColors.systemGreen,
           surface: CupertinoColors.systemBackground,
         ),
         useMaterial3: true,

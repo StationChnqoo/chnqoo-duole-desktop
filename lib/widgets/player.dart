@@ -1,3 +1,4 @@
+import 'package:duole/constants/fonts.dart';
 import 'package:duole/constants/player.dart';
 import 'package:duole/widgets/edit_text.dart';
 import 'package:flutter/material.dart';
@@ -56,7 +57,8 @@ class PlayerWidgetState extends State<PlayerWidget> {
         fit: FlexFit.tight,
         child: Container(
             width: double.infinity,
-            // decoration: BoxDecoration(color: Colors.blue),
+            decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12)),
+            padding: EdgeInsets.all(12),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -70,14 +72,25 @@ class PlayerWidgetState extends State<PlayerWidget> {
                           fontWeight: FontWeight.w500,
                           color: Theme.of(context).primaryColor),
                     ),
-                    Text(
-                      '${findUsefulCards()} -> ${calcUselessCards()}张',
-                      style: TextStyle(fontSize: 14, color: Colors.black87),
-                    )
+                    Row(
+                      children: [
+                        Text(
+                          '${findUsefulCards()} / ',
+                          style: TextStyle(fontSize: 14, color: Colors.black87),
+                        ),
+                        Text(
+                          '${calcUselessCards()}',
+                          style: TextStyle(
+                              fontSize: 36,
+                              color: Colors.red,
+                              fontFamily: Fonts.TimebombBb),
+                        )
+                      ],
+                    ),
                   ],
                 ),
                 SizedBox(
-                  height: 12,
+                  height: 1,
                 ),
                 LinearPercentIndicator(
                   // width: double.infinity,
