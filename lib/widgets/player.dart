@@ -6,8 +6,14 @@ import 'package:percent_indicator/linear_percent_indicator.dart';
 class PlayerWidget extends StatefulWidget {
   Player player;
   final onChange;
+  final int sum;
+  final String abcd;
 
-  PlayerWidget({required this.player, required this.onChange});
+  PlayerWidget(
+      {required this.player,
+      required this.onChange,
+      required this.sum,
+      required this.abcd});
 
   @override
   State<StatefulWidget> createState() => PlayerWidgetState();
@@ -16,7 +22,7 @@ class PlayerWidget extends StatefulWidget {
 class PlayerWidgetState extends State<PlayerWidget> {
   String findUsefulCards() {
     String result = '';
-    String abcd = '34567890JQKA';
+    String abcd = widget.abcd;
 
     for (int i = 0; i < abcd.length; i++) {
       if (widget.player.cards[2].toUpperCase().contains(abcd[i])) {
@@ -29,13 +35,13 @@ class PlayerWidgetState extends State<PlayerWidget> {
   }
 
   int calcUselessCards() =>
-      40 -
+      widget.sum -
       widget.player.cards[0].length -
       widget.player.cards[2].length +
       widget.player.cards[1].length;
 
   double calcUselesPercent() {
-    double result = calcUselessCards() / 40;
+    double result = calcUselessCards() / widget.sum;
     return result < 0
         ? 0
         : result > 1
