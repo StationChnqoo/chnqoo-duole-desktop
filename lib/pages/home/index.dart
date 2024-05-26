@@ -19,9 +19,8 @@ class _HomePageState extends State<HomePage> {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('多乐棋牌助手'),
-      ),
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title: Text('多乐棋牌助手')),
       body: Container(
           // decoration: BoxDecoration(color: Colors.amber),
           padding: EdgeInsets.all(12),
@@ -41,20 +40,38 @@ class _HomePageState extends State<HomePage> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  e.title,
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.black87),
-                                ),
-                                SizedBox(
-                                  height: 4,
-                                ),
-                                Text(
-                                  e.message,
-                                  style: TextStyle(
-                                      fontSize: 14, color: Colors.black54),
+                                Row(
+                                  children: [
+                                    Image.asset(
+                                      'assets/bh_logo.png',
+                                      height: 36,
+                                    ),
+                                    SizedBox(
+                                      width: 12,
+                                    ),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          e.title,
+                                          style: TextStyle(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w500,
+                                              color: Colors.black87),
+                                        ),
+                                        SizedBox(
+                                          height: 4,
+                                        ),
+                                        Text(
+                                          e.message,
+                                          style: TextStyle(
+                                              fontSize: 14,
+                                              color: Colors.black54),
+                                        )
+                                      ],
+                                    )
+                                  ],
                                 )
                               ],
                             ),

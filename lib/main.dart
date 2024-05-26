@@ -29,7 +29,7 @@ class _DuoleGameState extends State<DuoleGame> {
         // scaffoldBackgroundColor: CupertinoColors.systemBackground,
         fontFamily: Fonts.HarmonyOS,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: CupertinoColors.systemGreen,
+          seedColor: Colors.deepPurple,
           surface: CupertinoColors.systemBackground,
         ),
         useMaterial3: true,
