@@ -55,7 +55,7 @@ class GjPlayerWidgetState extends State<GjPlayerWidget> {
     // TODO: implement build
     return Flexible(
         fit: FlexFit.tight,
-        flex: 2,
+        flex: 1,
         child: Container(
           width: double.infinity,
           child: Card.outlined(

@@ -31,7 +31,7 @@ class _Gj6PageState extends State<Gj6Page> {
           // decoration: BoxDecoration(color: Colors.amber),
           padding: EdgeInsets.all(12),
           child: Column(
-            children: [GjWidget(abcd: '34567890JQKA2', sum: 30)],
+            children: [GjWidget(abcd: '34567890JQKA2', fu: 1)],
           )),
     );
   }
