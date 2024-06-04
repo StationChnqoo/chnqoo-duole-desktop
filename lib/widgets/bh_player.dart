@@ -1,26 +1,26 @@
 import 'package:duole/constants/fonts.dart';
-import 'package:duole/constants/player.dart';
+import 'package:duole/constants/bh_player.dart';
 import 'package:duole/widgets/edit_text.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
-class PlayerWidget extends StatefulWidget {
-  Player player;
+class BhPlayerWidget extends StatefulWidget {
+  BhPlayer player;
   final onChange;
   final int sum;
   final String abcd;
 
-  PlayerWidget(
+  BhPlayerWidget(
       {required this.player,
       required this.onChange,
       required this.sum,
       required this.abcd});
 
   @override
-  State<StatefulWidget> createState() => PlayerWidgetState();
+  State<StatefulWidget> createState() => BhPlayerWidgetState();
 }
 
-class PlayerWidgetState extends State<PlayerWidget> {
+class BhPlayerWidgetState extends State<BhPlayerWidget> {
   String findUsefulCards() {
     String result = '';
     String abcd = widget.abcd;

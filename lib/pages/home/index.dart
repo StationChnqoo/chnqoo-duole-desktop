@@ -89,7 +89,8 @@ class _HomePageState extends State<HomePage> {
     super.initState();
     games = [
       Game(page: RoutesClass.WFBH, title: '潍坊保皇', message: '憋3，有345，每人41张牌'),
-      Game(page: RoutesClass.FKBH, title: '疯狂保皇', message: '憋6，无345，每人31张牌')
+      Game(page: RoutesClass.FKBH, title: '疯狂保皇', message: '憋6，无345，每人31张牌'),
+      Game(page: RoutesClass.GJ6, title: '六副牌够级', message: '带鹰 / 不带鹰')
     ];
     setState(() {});
   }

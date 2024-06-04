@@ -1,13 +1,13 @@
-class Player {
+class GjPlayer {
   int id;
   String name;
   int sum;
   List<String> cards;
 
-  Player({
+  GjPlayer({
     required this.id,
     required this.name,
     required this.sum,
-    required this.cards, // [进贡、吃贡、出牌]
+    required this.cards, // 初始化多少牌 出的牌
   });
 }
